@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stephan Eicher — Management & Biographie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Language Toggle Bar -->
+<div class="lang-bar">
+  <span>Langue</span>
+  <div class="lang-toggle" id="langToggle" onclick="toggleLanguage()">
+    <span class="active" id="langFR">FR</span>
+    <span style="color:var(--line);">|</span>
+    <span class="inactive" id="langEN">EN</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#" class="logo">STEPHAN EICHER</a>
+  <ul>
+    <li><a href="#bio" data-fr="Biographie" data-en="Biography">Biographie</a></li>
+    <li><a href="#music" data-fr="Musique" data-en="Music Life">Musique</a></li>
+    <li><a href="#tour" data-fr="Tournée" data-en="Tour">Tournée</a></li>
+    <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div class="nav-auth">
+    <button onclick="openLogin()" id="loginBtn">Connexion</button>
+    <button class="primary" onclick="openAdminLogin()">Admin</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Stephan Eicher</h1>
+    <div class="tag" data-fr="Chansonnier suisse · 1960–" data-en="Swiss Chansonnier · 1960–">Chansonnier suisse · 1960–</div>
+    <p data-fr="Une carrière traversant la cold wave, l’expérimentation électronique et l’écriture acoustique intime. Multilingue, littéraire, toujours en tournée avec la même curiosité inlassable." data-en="A career spanning cold wave, electronic experimentation and intimate acoustic songwriting. Multilingual, literary, and still touring with the same restless curiosity.">Une carrière traversant la cold wave, l’expérimentation électronique et l’écriture acoustique intime. Multilingue, littéraire, toujours en tournée avec la même curiosité inlassable.</p>
+  </div>
+</header>
+
+<section id="bio" class="bio">
+  <h2 data-fr="Biographie" data-en="Biography">Biographie</h2>
+  <p class="lead" data-fr="D’une enfance rebelle près de Berne aux scènes de l’Olympia — une vie façonnée par la musique, les langues et un refus délibéré de se fixer." data-en="From a rebellious childhood near Bern to the stages of the Olympia and beyond — a life shaped by music, languages and a deliberate refusal to settle.">D’une enfance rebelle près de Berne aux scènes de l’Olympia — une vie façonnée par la musique, les langues et un refus délibéré de se fixer.</p>
+
+  <h3 data-fr="Origines & Enfance" data-en="Origins & Childhood">Origines & Enfance</h3>
+  <p data-fr="Stephan Eicher est né le 17 août 1960 à Münchenbuchsee, une petite commune juste à l’extérieur de Berne. Sa mère était alsacienne ; son père, d’origine yéniche (jenisch), travaillait comme réparateur de radio-télévision et jouait du violon jazz pendant son temps libre. La musique était déjà présente dans la maison : la cave était remplie d’instruments, de synthétiseurs artisanaux et de magnétophones. À sept ans, on lui confie un accordéon trop grand pour lui ; il préfère rapidement la guitare." data-en="Stephan Eicher was born on 17 August 1960 in Münchenbuchsee, a small municipality just outside Bern. His mother was Alsatian; his father, of Yeniche (Jenisch) origin, worked as a radio-television repairman and played jazz violin in his spare time. Music was already present in the household: the cellar of the family home was filled with instruments, homemade synthesizers and tape machines. At age seven he was handed an accordion that was too large for him; he quickly preferred the guitar.">Stephan Eicher est né le 17 août 1960 à Münchenbuchsee, une petite commune juste à l’extérieur de Berne. Sa mère était alsacienne ; son père, d’origine yéniche (jenisch), travaillait comme réparateur de radio-télévision et jouait du violon jazz pendant son temps libre. La musique était déjà présente dans la maison : la cave était remplie d’instruments, de synthétiseurs artisanaux et de magnétophones. À sept ans, on lui confie un accordéon trop grand pour lui ; il préfère rapidement la guitare.</p>
+  <p data-fr="C’était un enfant agité et solitaire qui avait du mal à l’école conventionnelle. À onze ans, il entre à l’École d’Humanité de Hasliberg. L’environnement était cosmopolite et plus libre, mais il se sentait toujours déplacé. À la mi-adolescence, il s’enfuit avec son professeur de dessin vers Hambourg avant d’être accepté, à dix-sept ans et sans baccalauréat, à la F+F Schule für Kunst und Design de Zurich — une académie d’art alternative axée sur la forme et la couleur. Il dira plus tard que cette école « lui a sauvé la vie »." data-en="He was a restless, solitary child who struggled in conventional school. At eleven he entered the progressive École d’Humanité boarding school in Hasliberg. The environment was cosmopolitan and freer, but he still felt out of place. In his mid-teens he ran away with his drawing teacher toward Hamburg before being accepted, at seventeen and without a baccalaureate, into the F+F Schule für Kunst und Design in Zurich — an alternative art academy focused on form and colour. He later said the school “saved my life.”">C’était un enfant agité et solitaire qui avait du mal à l’école conventionnelle. À onze ans, il entre à l’École d’Humanité de Hasliberg. L’environnement était cosmopolite et plus libre, mais il se sentait toujours déplacé. À la mi-adolescence, il s’enfuit avec son professeur de dessin vers Hambourg avant d’être accepté, à dix-sept ans et sans baccalauréat, à la F+F Schule für Kunst und Design de Zurich — une académie d’art alternative axée sur la forme et la couleur. Il dira plus tard que cette école « lui a sauvé la vie ».</p>
+
+  <h3 data-fr="Noise Boys & Grauzone" data-en="Noise Boys & Grauzone">Noise Boys & Grauzone</h3>
+  <p data-fr="À Zurich, il commence à faire de la musique électronique. Avec des amis, il forme Noise Boys, enregistrant du matériel synth-punk brut (réédité plus tard sous le nom <em>Spielt Noise Boys</em>). En 1980, il rejoint son jeune frère Martin dans le groupe Grauzone. Leur single de 1981 « Eisbär » devient un succès inattendu en Suisse alémanique et en Allemagne, se vendant à des centaines de milliers d’exemplaires et les établissant comme partie du mouvement Neue Deutsche Welle / cold-wave. Le succès apporte de l’argent mais aussi de la pression ; après la dissolution du groupe, Eicher s’éloigne brièvement avant de s’engager pleinement dans une carrière solo." data-en="In Zurich he began making electronic music. With friends he formed Noise Boys, recording raw synth-punk material (later reissued as <em>Spielt Noise Boys</em>). In 1980 he joined his younger brother Martin in the band Grauzone. Their 1981 single “Eisbär” became an unexpected hit across German-speaking Switzerland and Germany, selling hundreds of thousands of copies and establishing them as part of the Neue Deutsche Welle / cold-wave moment. The success brought money but also pressure; after the band dissolved, Eicher stepped away briefly before committing fully to a solo path.">À Zurich, il commence à faire de la musique électronique. Avec des amis, il forme Noise Boys, enregistrant du matériel synth-punk brut (réédité plus tard sous le nom <em>Spielt Noise Boys</em>). En 1980, il rejoint son jeune frère Martin dans le groupe Grauzone. Leur single de 1981 « Eisbär » devient un succès inattendu en Suisse alémanique et en Allemagne, se vendant à des centaines de milliers d’exemplaires et les établissant comme partie du mouvement Neue Deutsche Welle / cold-wave. Le succès apporte de l’argent mais aussi de la pression ; après la dissolution du groupe, Eicher s’éloigne brièvement avant de s’engager pleinement dans une carrière solo.</p>
+
+  <h3 data-fr="Débuts en solo" data-en="Solo Beginnings">Débuts en solo</h3>
+  <p data-fr="Son premier album solo, <em>Les Chansons Bleues</em> (1983), mélange déjà des textures électroniques avec un intérêt croissant pour la chanson française. Le suivant <em>I Tell This Night</em> (1985) contient le hit « Two People in a Room ». En 1986, il remplit l’Olympia à Paris. L’album <em>Silence</em> de 1987 livre « Combien de temps », une chanson qui élargit son public français. À la fin de la décennie, il travaille régulièrement avec l’écrivain Philippe Djian, une collaboration qui définira une grande partie de son répertoire francophone pour les trente années suivantes." data-en="His first solo album, <em>Les Chansons Bleues</em> (1983), already mixed electronic textures with a growing interest in French song. The follow-up <em>I Tell This Night</em> (1985) contained the hit “Two People in a Room.” In 1986 he sold out the Olympia in Paris. The 1987 album <em>Silence</em> delivered “Combien de temps,” a song that widened his French audience. By the end of the decade he was working regularly with the writer Philippe Djian, a collaboration that would define much of his French-language repertoire for the next thirty years.">Son premier album solo, <em>Les Chansons Bleues</em> (1983), mélange déjà des textures électroniques avec un intérêt croissant pour la chanson française. Le suivant <em>I Tell This Night</em> (1985) contient le hit « Two People in a Room ». En 1986, il remplit l’Olympia à Paris. L’album <em>Silence</em> de 1987 livre « Combien de temps », une chanson qui élargit son public français. À la fin de la décennie, il travaille régulièrement avec l’écrivain Philippe Djian, une collaboration qui définira une grande partie de son répertoire francophone pour les trente années suivantes.</p>
+
+  <h3 data-fr="Engelberg et les années 1990" data-en="Engelberg and the 1990s">Engelberg et les années 1990</h3>
+  <p data-fr="L’album <em>Engelberg</em> de 1991, nommé d’après la station de ski suisse où il a été enregistré, devient son percée commerciale. Des singles comme « Déjeuner en paix », « Hemmige » et « Pas d’ami (comme toi) » poussent les ventes vers deux millions d’exemplaires à travers l’Europe. Les albums suivants <em>Carcassonne</em> (1993), <em>1000 Vies</em> (1996) et <em>Louanges</em> (1999) continuent d’explorer différents univers sonores tout en gardant la collaboration littéraire avec Djian au centre. Il commence aussi à écrire pour le cinéma, contribuant à la bande originale de <em>Monsieur N.</em> d’Antoine de Caunes." data-en="The 1991 album <em>Engelberg</em>, named after the Swiss ski resort where it was recorded, became his commercial breakthrough. Singles such as “Déjeuner en paix,” “Hemmige” and “Pas d’ami (comme toi)” pushed sales toward two million copies across Europe. Subsequent albums <em>Carcassonne</em> (1993), <em>1000 Vies</em> (1996) and <em>Louanges</em> (1999) continued to explore different sonic worlds while keeping the literary collaboration with Djian at the centre. He also began writing for film, contributing the score for Antoine de Caunes’ <em>Monsieur N.</em>">L’album <em>Engelberg</em> de 1991, nommé d’après la station de ski suisse où il a été enregistré, devient son percée commerciale. Des singles comme « Déjeuner en paix », « Hemmige » et « Pas d’ami (comme toi) » poussent les ventes vers deux millions d’exemplaires à travers l’Europe. Les albums suivants <em>Carcassonne</em> (1993), <em>1000 Vies</em> (1996) et <em>Louanges</em> (1999) continuent d’explorer différents univers sonores tout en gardant la collaboration littéraire avec Djian au centre. Il commence aussi à écrire pour le cinéma, contribuant à la bande originale de <em>Monsieur N.</em> d’Antoine de Caunes.</p>
+
+  <h3 data-fr="Carrière ultérieure & Partenariats littéraires" data-en="Later Career & Literary Partnerships">Carrière ultérieure & Partenariats littéraires</h3>
+  <p data-fr="Dans les années 2000 et 2010, Eicher sort <em>Taxi Europa</em>, <em>Eldorado</em> et <em>L’Envolée</em>, et approfondit son partenariat avec l’écrivain suisse Martin Suter. Leur premier <em>Song Book</em> commun paraît en 2017 ; un second volume est prévu pour 2027. Le travail studio plus récent inclut l’acclamé <em>Homeless Songs</em> (2019), <em>Ode</em> (2022) et l’intime et acoustique <em>Poussière d’Or</em> (2025), son dix-huitième album studio. Il continue de se produire à la fois en groupe complet et dans le format plus théâtral « Seul en scène »." data-en="In the 2000s and 2010s Eicher released <em>Taxi Europa</em>, <em>Eldorado</em> and <em>L’Envolée</em>, and deepened his partnership with the Swiss writer Martin Suter. Their first joint <em>Song Book</em> appeared in 2017; a second volume is scheduled for 2027. More recent studio work includes the acclaimed <em>Homeless Songs</em> (2019), <em>Ode</em> (2022) and the intimate, acoustic <em>Poussière d’Or</em> (2025), his eighteenth studio album. He continues to perform both full-band shows and the more theatrical “Seul en scène” format.">Dans les années 2000 et 2010, Eicher sort <em>Taxi Europa</em>, <em>Eldorado</em> et <em>L’Envolée</em>, et approfondit son partenariat avec l’écrivain suisse Martin Suter. Leur premier <em>Song Book</em> commun paraît en 2017 ; un second volume est prévu pour 2027. Le travail studio plus récent inclut l’acclamé <em>Homeless Songs</em> (2019), <em>Ode</em> (2022) et l’intime et acoustique <em>Poussière d’Or</em> (2025), son dix-huitième album studio. Il continue de se produire à la fois en groupe complet et dans le format plus théâtral « Seul en scène ».</p>
+
+  <h3 data-fr="Aujourd’hui" data-en="Today">Aujourd’hui</h3>
+  <p data-fr="Maintenant dans la soixantaine, Eicher décrit le travail comme sa « drogue préférée ». Il maintient une empreinte matérielle délibérément légère — vivant par périodes à l’hôtel, gardant instruments et livres dans un garage près de Montreux — tout en restant très productif. Il chante en français, allemand, suisse allemand, anglais et parfois italien ou romanche, traitant la langue elle-même comme un autre instrument. En 2021, il a reçu le Grand Prix Suisse de Musique." data-en="Now in his mid-sixties, Eicher describes work as his “favourite drug.” He maintains a deliberately light material footprint — living for periods in hotels, keeping instruments and books in a garage near Montreux — while remaining highly productive. He sings in French, German, Swiss German, English and occasionally Italian or Romansh, treating language itself as another instrument. In 2021 he received the Swiss Grand Prix Musik.">Maintenant dans la soixantaine, Eicher décrit le travail comme sa « drogue préférée ». Il maintient une empreinte matérielle délibérément légère — vivant par périodes à l’hôtel, gardant instruments et livres dans un garage près de Montreux — tout en restant très productif. Il chante en français, allemand, suisse allemand, anglais et parfois italien ou romanche, traitant la langue elle-même comme un autre instrument. En 2021, il a reçu le Grand Prix Suisse de Musique.</p>
+</section>
+
+<section id="music" class="music">
+  <h2 data-fr="Vie musicale" data-en="Musical Life">Vie musicale</h2>
+  <p class="lead" data-fr="Une chronologie sélective d’albums, de tournants et de collaborations en cours." data-en="A selective chronology of albums, turning points and ongoing collaborations.">Une chronologie sélective d’albums, de tournants et de collaborations en cours.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">1980–1981</div>
+      <strong>Grauzone · Eisbär</strong>
+      <span data-fr="Post-punk / cold wave. Le single se vend massivement en Europe germanophone et reste un classique culte." data-en="Post-punk / cold wave. The single sells massively in German-speaking Europe and remains a cult classic.">Post-punk / cold wave. Le single se vend massivement en Europe germanophone et reste un classique culte.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">1983</div>
+      <strong>Les Chansons Bleues</strong>
+      <span data-fr="Premier album solo. Textures électroniques rencontrent un intérêt naissant pour la chanson française." data-en="First solo album. Electronic textures meet an emerging interest in French chanson.">Premier album solo. Textures électroniques rencontrent un intérêt naissant pour la chanson française.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">1985</div>
+      <strong>I Tell This Night</strong>
+      <span data-fr="Contient « Two People in a Room ». Première visibilité française majeure ; l’Olympia affiche complet." data-en="Contains “Two People in a Room.” First major French visibility; Olympia sell-out follows.">Contient « Two People in a Room ». Première visibilité française majeure ; l’Olympia affiche complet.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">1987</div>
+      <strong>Silence</strong>
+      <span data-fr="« Combien de temps » devient une chanson signature. La collaboration avec Philippe Djian commence sérieusement." data-en="“Combien de temps” becomes a signature song. Collaboration with Philippe Djian begins in earnest.">« Combien de temps » devient une chanson signature. La collaboration avec Philippe Djian commence sérieusement.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">1991</div>
+      <strong>Engelberg</strong>
+      <span data-fr="Apogée commerciale. Près de deux millions d’exemplaires. « Déjeuner en paix », « Hemmige », « Pas d’ami (comme toi) »." data-en="Commercial peak. Nearly two million copies. “Déjeuner en paix,” “Hemmige,” “Pas d’ami (comme toi).”">Apogée commerciale. Près de deux millions d’exemplaires. « Déjeuner en paix », « Hemmige », « Pas d’ami (comme toi) ».</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">1993–1999</div>
+      <strong>Carcassonne · 1000 Vies · Louanges</strong>
+      <span data-fr="Exploration continue de la forme, de la chanson intime aux arrangements plus amples. Bande originale pour <em>Monsieur N.</em>" data-en="Continued exploration of form, from intimate song to larger arrangements. Film score for <em>Monsieur N.</em>">Exploration continue de la forme, de la chanson intime aux arrangements plus amples. Bande originale pour <em>Monsieur N.</em></span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2003–2012</div>
+      <strong>Taxi Europa · Eldorado · L’Envolée</strong>
+      <span data-fr="Tournées européennes continues et partenariat approfondi avec Martin Suter." data-en="Further European touring and the deepening partnership with Martin Suter.">Tournées européennes continues et partenariat approfondi avec Martin Suter.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2017</div>
+      <strong>Song Book (avec Martin Suter)</strong>
+      <span data-fr="Premier projet livre-album commun. Concerts à guichets fermés en Suisse." data-en="First joint book-and-album project. Sold-out concerts in Switzerland.">Premier projet livre-album commun. Concerts à guichets fermés en Suisse.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2019</div>
+      <strong>Homeless Songs</strong>
+      <span data-fr="Retour salué par la critique à un territoire plus personnel et acoustique." data-en="Critically praised return to more personal, acoustic territory.">Retour salué par la critique à un territoire plus personnel et acoustique.</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2022</div>
+      <strong>Ode</strong>
+      <span data-fr="Poursuite de l’acoustique ; inclut le titre « Le Plus Léger Au Monde »." data-en="Continued acoustic focus; includes the track “Le Plus Léger Au Monde.”">Poursuite de l’acoustique ; inclut le titre « Le Plus Léger Au Monde ».</span>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2025</div>
+      <strong>Poussière d’Or</strong>
+      <span data-fr="Dix-huitième album studio. Écrit principalement avec Philippe Djian (un titre avec Martin Suter). Produit par Martin Gallop. Intime, lumineux, délibérément libre d’intelligence artificielle." data-en="Eighteenth studio album. Written primarily with Philippe Djian (one track with Martin Suter). Produced by Martin Gallop. Intimate, luminous, deliberately free of artificial intelligence.">Dix-huitième album studio. Écrit principalement avec Philippe Djian (un titre avec Martin Suter). Produit par Martin Gallop. Intime, lumineux, délibérément libre d’intelligence artificielle.</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top:3.5rem;" data-fr="Albums studio sélectionnés" data-en="Selected Studio Albums">Albums studio sélectionnés</h3>
+  <div class="album-grid">
+    <div class="album-card"><div class="year">1983</div><h4>Les Chansons Bleues</h4><p data-fr="Déclaration solo inaugurale." data-en="Debut solo statement.">Déclaration solo inaugurale.</p></div>
+    <div class="album-card"><div class="year">1985</div><h4>I Tell This Night</h4><p data-fr="« Two People in a Room »." data-en="“Two People in a Room.”">« Two People in a Room ».</p></div>
+    <div class="album-card"><div class="year">1987</div><h4>Silence</h4><p data-fr="« Combien de temps »." data-en="“Combien de temps.”">« Combien de temps ».</p></div>
+    <div class="album-card"><div class="year">1989</div><h4>My Place</h4><p data-fr="Première collaboration avec Djian." data-en="Early Djian collaboration.">Première collaboration avec Djian.</p></div>
+    <div class="album-card"><div class="year">1991</div><h4>Engelberg</h4><p data-fr="Percée commerciale majeure." data-en="Major commercial breakthrough.">Percée commerciale majeure.</p></div>
+    <div class="album-card"><div class="year">1993</div><h4>Carcassonne</h4><p data-fr="Nommé d’après la ville française." data-en="Named for the French city.">Nommé d’après la ville française.</p></div>
+    <div class="album-card"><div class="year">1996</div><h4>1000 Vies</h4><p data-fr="Éléments symphoniques et chanson." data-en="Symphonic and chanson elements.">Éléments symphoniques et chanson.</p></div>
+    <div class="album-card"><div class="year">1999</div><h4>Louanges</h4><p data-fr="Enregistré à Engelberg." data-en="Recorded in Engelberg.">Enregistré à Engelberg.</p></div>
+    <div class="album-card"><div class="year">2003</div><h4>Taxi Europa</h4><p data-fr="Chansons de route européennes." data-en="European road songs.">Chansons de route européennes.</p></div>
+    <div class="album-card"><div class="year">2007</div><h4>Eldorado</h4><p data-fr="Inclut le texte de Suter « Weiss nid was es isch »." data-en="Includes Suter lyric “Weiss nid was es isch.”">Inclut le texte de Suter « Weiss nid was es isch ».</p></div>
+    <div class="album-card"><div class="year">2012</div><h4>L’Envolée</h4><p data-fr="Affinement de la période tardive." data-en="Later-period refinement.">Affinement de la période tardive.</p></div>
+    <div class="album-card"><div class="year">2017</div><h4>Song Book</h4><p data-fr="Avec Martin Suter." data-en="With Martin Suter.">Avec Martin Suter.</p></div>
+    <div class="album-card"><div class="year">2019</div><h4>Homeless Songs</h4><p data-fr="Œuvre tardive très estimée." data-en="Highly regarded late work.">Œuvre tardive très estimée.</p></div>
+    <div class="album-card"><div class="year">2022</div><h4>Ode</h4><p data-fr="Poursuite acoustique." data-en="Acoustic continuation.">Poursuite acoustique.</p></div>
+    <div class="album-card"><div class="year">2025</div><h4>Poussière d’Or</h4><p data-fr="Album actuel. En tournée." data-en="Current album. On tour.">Album actuel. En tournée.</p></div>
+  </div>
+</section>
+
+<section id="tour" class="tour-section">
+  <h2 data-fr="Actuel & À venir" data-en="Current & Upcoming">Actuel & À venir</h2>
+  <p class="lead" style="color:var(--muted);" data-fr="Tournée Poussière d’Or (France) et Song Book Vol. 2 avec Martin Suter (Suisse 2027)." data-en="Poussière d’Or Tour (France) and Song Book Vol. 2 with Martin Suter (Switzerland 2027).">Tournée Poussière d’Or (France) et Song Book Vol. 2 avec Martin Suter (Suisse 2027).</p>
+
+  <h3 style="font-family:'Playfair Display',serif; font-size:1.5rem; margin:2rem 0 1rem; color:var(--gold-soft);">Poussière d’Or Tour</h3>
+  <div id="tourDatesFR">
+    <!-- filled by JS -->
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif; font-size:1.5rem; margin:3rem 0 1rem; color:var(--gold-soft);">Song Book Vol. 2 · with Martin Suter</h3>
+  <div id="songbookDates">
+    <!-- filled by JS -->
+  </div>
+</section>
+
+<section id="contact">
+  <h2 data-fr="Management & Réservation" data-en="Management & Booking">Management & Réservation</h2>
+  <p data-fr="Ceci est un site d’information indépendant. Pour les demandes officielles de réservation, de presse et de management, veuillez utiliser les canaux officiels de l’artiste." data-en="This is an independent informational site. For official booking, press and management inquiries please use the artist’s official channels.">Ceci est un site d’information indépendant. Pour les demandes officielles de réservation, de presse et de management, veuillez utiliser les canaux officiels de l’artiste.</p>
+  <div class="contact-box">
+    <p><strong>Site officiel</strong><br><a href="https://www.stephan-eicher.com" style="color:var(--gold);">stephan-eicher.com</a></p>
+    <p style="margin-top:1.2rem;"><strong>Billetterie</strong><br>Ticketcorner (Suisse) · Fnac Spectacles & salles locales (France)</p>
+    <p style="margin-top:1.2rem; color:var(--muted); font-size:0.95rem;" data-fr="Toutes les informations de tournée sont à jour en novembre 2026 et susceptibles de changer." data-en="All tour information current as of November 2026 and subject to change.">Toutes les informations de tournée sont à jour en novembre 2026 et susceptibles de changer.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Stephan Eicher · <span data-fr="Biographie & aperçu de tournée" data-en="Artist biography & tour overview">Biographie & aperçu de tournée</span></p>
+  <p style="margin-top:0.6rem;"><span data-fr="Référence non officielle de style management" data-en="Unofficial management-style reference">Référence non officielle de style management</span> · <a href="https://www.stephan-eicher.com">Site officiel</a></p>
+</footer>
+
+<!-- ========== MODALS ========== -->
+
+<!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <h3 data-fr="Connexion <span>Client</span>" data-en="Customer <span>Login</span>">Connexion <span>Client</span></h3>
+    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:1.5rem;" data-fr="Connectez-vous pour accéder à votre tableau de bord et gérer vos réservations." data-en="Log in to access your dashboard and manage your bookings.">Connectez-vous pour accéder à votre tableau de bord et gérer vos réservations.</p>
+    <label data-fr="Nom d’utilisateur" data-en="Username">Nom d’utilisateur</label>
+    <input type="text" id="loginUser" placeholder="client" value="client">
+    <label data-fr="Mot de passe" data-en="Password">Mot de passe</label>
+    <input type="password" id="loginPass" placeholder="••••••••" value="client123">
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeModal('loginModal')" data-fr="Annuler" data-en="Cancel">Annuler</button>
+      <button class="btn-primary" onclick="handleLogin()" data-fr="Se connecter" data-en="Log in">Se connecter</button>
+    </div>
+    <p class="modal-hint" data-fr="Démo : <code>client</code> / <code>client123</code>" data-en="Demo: <code>client</code> / <code>client123</code>">Démo : <code>client</code> / <code>client123</code></p>
+  </div>
+</div>
+
+<!-- Admin Login Modal -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal-box">
+    <h3 data-fr="Connexion <span>Admin</span>" data-en="Admin <span>Login</span>">Connexion <span>Admin</span></h3>
+    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:1.5rem;" data-fr="Accès administrateur pour la gestion des réservations." data-en="Administrator access for booking management.">Accès administrateur pour la gestion des réservations.</p>
+    <label data-fr="Nom d’utilisateur" data-en="Username">Nom d’utilisateur</label>
+    <input type="text" id="adminUser" placeholder="admin" value="admin">
+    <label data-fr="Mot de passe" data-en="Password">Mot de passe</label>
+    <input type="password" id="adminPass" placeholder="••••••••" value="admin123">
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeModal('adminModal')" data-fr="Annuler" data-en="Cancel">Annuler</button>
+      <button class="btn-primary" onclick="handleAdminLogin()" data-fr="Se connecter" data-en="Log in">Se connecter</button>
+    </div>
+    <p class="modal-hint" data-fr="Démo : <code>admin</code> / <code>admin123</code>" data-en="Demo: <code>admin</code> / <code>admin123</code>">Démo : <code>admin</code> / <code>admin123</code></p>
+  </div>
+</div>
+
+<!-- Customer Dashboard (Flux Bank style with buffering) -->
+<div class="dashboard-overlay" id="dashboardOverlay">
+  <!-- Buffer Screen -->
+  <div class="buffer-screen" id="bufferScreen">
+    <div class="flux-logo">FLUX<span>BANK</span></div>
+    <div class="buffer-ring"></div>
+    <div class="buffer-text" data-fr="Préparation de votre espace client..." data-en="Preparing your customer space...">Préparation de votre espace client...</div>
+    <div class="buffer-countdown" id="bufferCountdown">7</div>
+    <div class="buffer-bar"><div class="fill" id="bufferFill"></div></div>
+  </div>
+
+  <!-- Dashboard Panel -->
+  <div class="dashboard-panel" id="dashboardPanel">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title"><span>Flux</span> Dashboard</div>
+        <div style="font-size:0.8rem; color:var(--muted);" id="dashWelcome">Bienvenue</div>
+      </div>
+      <div style="display:flex; gap:0.8rem; align-items:center;">
+        <span class="flux-tag">Client</span>
+        <button class="dash-close" onclick="closeDashboard()">✕</button>
+      </div>
+    </div>
+    <div class="dash-body">
+      <div class="dash-welcome">
+        <div>
+          <h3 id="dashUserName">Bonjour, Client</h3>
+          <p data-fr="Voici un aperçu de vos réservations et de votre compte." data-en="Here's an overview of your bookings and account.">Voici un aperçu de vos réservations et de votre compte.</p>
+        </div>
+        <button class="btn-primary" style="padding:0.6rem 1.2rem; font-size:0.85rem;" onclick="openBookingForm()" data-fr="Nouvelle réservation" data-en="New booking">Nouvelle réservation</button>
+      </div>
+
+      <div class="dash-balance">
+        <div>
+          <div class="label" data-fr="Solde Flux" data-en="Flux Balance">Solde Flux</div>
+          <div class="amount">€ 1,240.00</div>
+        </div>
+        <span class="flux-badge">Flux Bank</span>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-card">
+          <div class="card-label" data-fr="Réservations à venir" data-en="Upcoming bookings">Réservations à venir</div>
+          <div class="card-value" id="dashUpcoming">3</div>
+        </div>
+        <div class="dash-card">
+          <div class="card-label" data-fr="Réservations passées" data-en="Past bookings">Réservations passées</div>
+          <div class="card-value" id="dashPast">8</div>
+        </div>
+        <div class="dash-card">
+          <div class="card-label" data-fr="Statut du compte" data-en="Account status">Statut du compte</div>
+          <div class="card-value" style="font-size:1rem; color:var(--success);" data-fr="Actif" data-en="Active">Actif</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:0.8rem;" data-fr="Mes réservations" data-en="My bookings">Mes réservations</h4>
+        <div class="dash-bookings" id="dashBookings">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </div>
+    <div class="dash-footer">
+      <span data-fr="Propulsé par Flux Bank" data-en="Powered by Flux Bank">Propulsé par Flux Bank</span>
+      <a href="#" onclick="closeDashboard()" data-fr="Se déconnecter" data-en="Log out">Se déconnecter</a>
+    </div>
+  </div>
+</div>
+
+<!-- Admin Panel -->
+<div class="dashboard-overlay" id="adminPanelOverlay">
+  <div class="admin-panel" id="adminPanel">
+    <div class="admin-header">
+      <div>
+        <div class="admin-title">Admin <span>Panel</span></div>
+        <div style="font-size:0.8rem; color:var(--muted);" data-fr="Gestion des réservations" data-en="Booking management">Gestion des réservations</div>
+      </div>
+      <div style="display:flex; gap:0.8rem; align-items:center;">
+        <span class="admin-badge">Admin</span>
+        <button class="dash-close" onclick="closeAdminPanel()">✕</button>
+      </div>
+    </div>
+    <div class="admin-body">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th data-fr="Client" data-en="Client">Client</th>
+            <th data-fr="Date" data-en="Date">Date</th>
+            <th data-fr="Lieu" data-en="Venue">Lieu</th>
+            <th data-fr="Statut" data-en="Status">Statut</th>
+            <th data-fr="Actions" data-en="Actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="adminBookingsTable">
+          <!-- filled by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Booking Form Modal -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal-box">
+    <h3 data-fr="Nouvelle <span>réservation</span>" data-en="New <span>booking</span>">Nouvelle <span>réservation</span></h3>
+    <label data-fr="Date du concert" data-en="Concert date">Date du concert</label>
+    <input type="date" id="bookingDate">
+    <label data-fr="Lieu" data-en="Venue">Lieu</label>
+    <input type="text" id="bookingVenue" placeholder="Ex: Olympia, Paris">
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeModal('bookingModal')" data-fr="Annuler" data-en="Cancel">Annuler</button>
+      <button class="btn-primary" onclick="submitBooking()" data-fr="Réserver" data-en="Book">Réserver</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
