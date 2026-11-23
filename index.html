@@ -6,8 +6,39 @@
   <title>Stephan Eicher — Management & Biographie</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Background slideshow wrapper */
+    #bg-slideshow {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: #000;
+    }
+    #bg-slideshow .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center 20%;
+      opacity: 0;
+      transition: opacity 2.5s ease-in-out;
+    }
+    #bg-slideshow .slide.active {
+      opacity: 1;
+    }
+    /* Dark overlay to make text readable */
+    #bg-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(10,10,12,0.85) 0%, rgba(10,10,12,0.95) 100%);
+    }
+  </style>
 </head>
 <body>
+
+<!-- Background Slideshow -->
+<div id="bg-slideshow"></div>
+<div id="bg-overlay"></div>
 
 <div class="lang-bar">
   <span>Langue</span>
@@ -27,7 +58,6 @@
     <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
   </ul>
   <div class="nav-auth">
-    <!-- ADMIN BUTTON HAS BEEN REMOVED FROM HERE -->
     <button onclick="openLogin()" id="loginBtn">Connexion</button>
   </div>
 </nav>
@@ -235,6 +265,61 @@
   </div>
 </div>
 
+<script>
+  // Background Slideshow Logic
+  const photoUrls = [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/2021_Stephan_Eicher_%28cropped%29.jpg/1200px-2021_Stephan_Eicher_%28cropped%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Eicher_Bardentreffen_15_0748.jpg/1280px-Eicher_Bardentreffen_15_0748.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Eicher_Bardentreffen_15_0781.jpg/1280px-Eicher_Bardentreffen_15_0781.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Eicher_Bardentreffen_15_0837.jpg/960px-Eicher_Bardentreffen_15_0837.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Eicher_Bardentreffen_15_0896.jpg/1280px-Eicher_Bardentreffen_15_0896.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Eicher_Bardentreffen_15_0937.jpg/960px-Eicher_Bardentreffen_15_0937.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Eicher_Bardentreffen_15_0964.jpg/1280px-Eicher_Bardentreffen_15_0964.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Stephan_Eicher_%40_Brussels_Summer_Festival_2012_%288656340316%29.jpg/1280px-Stephan_Eicher_%40_Brussels_Summer_Festival_2012_%288656340316%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Stephan_Eicher_%40_Bsf_2012_%287855842396%29.jpg/960px-Stephan_Eicher_%40_Bsf_2012_%287855842396%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Stephan_Eicher_%40_Bsf_2012_%288158762873%29.jpg/1280px-Stephan_Eicher_%40_Bsf_2012_%288158762873%29.jpg"
+  ];
+
+  const bgContainer = document.getElementById('bg-slideshow');
+  
+  async function convertToBase64(url) {
+    try {
+      const response = await fetch(url, { mode: 'cors' });
+      const blob = await response.blob();
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+    } catch (error) {
+      return url; // Fallback to URL if CORS fails
+    }
+  }
+
+  async function initBackground() {
+    for (let i = 0; i < photoUrls.length; i++) {
+      const base64 = await convertToBase64(photoUrls[i]);
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = `url('${base64}')`;
+      bgContainer.appendChild(slide);
+    }
+    
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
+  }
+
+  // Wait for page load to start fetching background
+  window.addEventListener('load', initBackground);
+</script>
+
+<!-- Your standard site scripts -->
 <script src="script.js"></script>
 </body>
 </html>
