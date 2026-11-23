@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stephan Eicher — Management & Biographie</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Linked to the root style.css -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Language Toggle Bar -->
 <div class="lang-bar">
   <span>Langue</span>
   <div class="lang-toggle" id="langToggle" onclick="toggleLanguage()">
@@ -29,7 +29,7 @@
   </ul>
   <div class="nav-auth">
     <button onclick="openLogin()" id="loginBtn">Connexion</button>
-    <button class="primary" onclick="openAdminLogin()">Admin</button>
+    <a href="admin.html" class="btn primary">Admin</a>
   </div>
 </nav>
 
@@ -70,61 +70,17 @@
   <p class="lead" data-fr="Une chronologie sélective d’albums, de tournants et de collaborations en cours." data-en="A selective chronology of albums, turning points and ongoing collaborations.">Une chronologie sélective d’albums, de tournants et de collaborations en cours.</p>
 
   <div class="timeline">
-    <div class="timeline-item">
-      <div class="year">1980–1981</div>
-      <strong>Grauzone · Eisbär</strong>
-      <span data-fr="Post-punk / cold wave. Le single se vend massivement en Europe germanophone et reste un classique culte." data-en="Post-punk / cold wave. The single sells massively in German-speaking Europe and remains a cult classic.">Post-punk / cold wave. Le single se vend massivement en Europe germanophone et reste un classique culte.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">1983</div>
-      <strong>Les Chansons Bleues</strong>
-      <span data-fr="Premier album solo. Textures électroniques rencontrent un intérêt naissant pour la chanson française." data-en="First solo album. Electronic textures meet an emerging interest in French chanson.">Premier album solo. Textures électroniques rencontrent un intérêt naissant pour la chanson française.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">1985</div>
-      <strong>I Tell This Night</strong>
-      <span data-fr="Contient « Two People in a Room ». Première visibilité française majeure ; l’Olympia affiche complet." data-en="Contains “Two People in a Room.” First major French visibility; Olympia sell-out follows.">Contient « Two People in a Room ». Première visibilité française majeure ; l’Olympia affiche complet.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">1987</div>
-      <strong>Silence</strong>
-      <span data-fr="« Combien de temps » devient une chanson signature. La collaboration avec Philippe Djian commence sérieusement." data-en="“Combien de temps” becomes a signature song. Collaboration with Philippe Djian begins in earnest.">« Combien de temps » devient une chanson signature. La collaboration avec Philippe Djian commence sérieusement.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">1991</div>
-      <strong>Engelberg</strong>
-      <span data-fr="Apogée commerciale. Près de deux millions d’exemplaires. « Déjeuner en paix », « Hemmige », « Pas d’ami (comme toi) »." data-en="Commercial peak. Nearly two million copies. “Déjeuner en paix,” “Hemmige,” “Pas d’ami (comme toi).”">Apogée commerciale. Près de deux millions d’exemplaires. « Déjeuner en paix », « Hemmige », « Pas d’ami (comme toi) ».</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">1993–1999</div>
-      <strong>Carcassonne · 1000 Vies · Louanges</strong>
-      <span data-fr="Exploration continue de la forme, de la chanson intime aux arrangements plus amples. Bande originale pour <em>Monsieur N.</em>" data-en="Continued exploration of form, from intimate song to larger arrangements. Film score for <em>Monsieur N.</em>">Exploration continue de la forme, de la chanson intime aux arrangements plus amples. Bande originale pour <em>Monsieur N.</em></span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2003–2012</div>
-      <strong>Taxi Europa · Eldorado · L’Envolée</strong>
-      <span data-fr="Tournées européennes continues et partenariat approfondi avec Martin Suter." data-en="Further European touring and the deepening partnership with Martin Suter.">Tournées européennes continues et partenariat approfondi avec Martin Suter.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2017</div>
-      <strong>Song Book (avec Martin Suter)</strong>
-      <span data-fr="Premier projet livre-album commun. Concerts à guichets fermés en Suisse." data-en="First joint book-and-album project. Sold-out concerts in Switzerland.">Premier projet livre-album commun. Concerts à guichets fermés en Suisse.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2019</div>
-      <strong>Homeless Songs</strong>
-      <span data-fr="Retour salué par la critique à un territoire plus personnel et acoustique." data-en="Critically praised return to more personal, acoustic territory.">Retour salué par la critique à un territoire plus personnel et acoustique.</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2022</div>
-      <strong>Ode</strong>
-      <span data-fr="Poursuite de l’acoustique ; inclut le titre « Le Plus Léger Au Monde »." data-en="Continued acoustic focus; includes the track “Le Plus Léger Au Monde.”">Poursuite de l’acoustique ; inclut le titre « Le Plus Léger Au Monde ».</span>
-    </div>
-    <div class="timeline-item">
-      <div class="year">2025</div>
-      <strong>Poussière d’Or</strong>
-      <span data-fr="Dix-huitième album studio. Écrit principalement avec Philippe Djian (un titre avec Martin Suter). Produit par Martin Gallop. Intime, lumineux, délibérément libre d’intelligence artificielle." data-en="Eighteenth studio album. Written primarily with Philippe Djian (one track with Martin Suter). Produced by Martin Gallop. Intimate, luminous, deliberately free of artificial intelligence.">Dix-huitième album studio. Écrit principalement avec Philippe Djian (un titre avec Martin Suter). Produit par Martin Gallop. Intime, lumineux, délibérément libre d’intelligence artificielle.</span>
-    </div>
+    <div class="timeline-item"><div class="year">1980–1981</div><strong>Grauzone · Eisbär</strong><span data-fr="Post-punk / cold wave. Le single se vend massivement en Europe germanophone et reste un classique culte." data-en="Post-punk / cold wave. The single sells massively in German-speaking Europe and remains a cult classic.">Post-punk / cold wave. Le single se vend massivement en Europe germanophone et reste un classique culte.</span></div>
+    <div class="timeline-item"><div class="year">1983</div><strong>Les Chansons Bleues</strong><span data-fr="Premier album solo. Textures électroniques rencontrent un intérêt naissant pour la chanson française." data-en="First solo album. Electronic textures meet an emerging interest in French chanson.">Premier album solo. Textures électroniques rencontrent un intérêt naissant pour la chanson française.</span></div>
+    <div class="timeline-item"><div class="year">1985</div><strong>I Tell This Night</strong><span data-fr="Contient « Two People in a Room ». Première visibilité française majeure ; l’Olympia affiche complet." data-en="Contains “Two People in a Room.” First major French visibility; Olympia sell-out follows.">Contient « Two People in a Room ». Première visibilité française majeure ; l’Olympia affiche complet.</span></div>
+    <div class="timeline-item"><div class="year">1987</div><strong>Silence</strong><span data-fr="« Combien de temps » devient une chanson signature. La collaboration avec Philippe Djian commence sérieusement." data-en="“Combien de temps” becomes a signature song. Collaboration with Philippe Djian begins in earnest.">« Combien de temps » devient une chanson signature. La collaboration avec Philippe Djian commence sérieusement.</span></div>
+    <div class="timeline-item"><div class="year">1991</div><strong>Engelberg</strong><span data-fr="Apogée commerciale. Près de deux millions d’exemplaires. « Déjeuner en paix », « Hemmige », « Pas d’ami (comme toi) »." data-en="Commercial peak. Nearly two million copies. “Déjeuner en paix,” “Hemmige,” “Pas d’ami (comme toi).”">Apogée commerciale. Près de deux millions d’exemplaires. « Déjeuner en paix », « Hemmige », « Pas d’ami (comme toi) ».</span></div>
+    <div class="timeline-item"><div class="year">1993–1999</div><strong>Carcassonne · 1000 Vies · Louanges</strong><span data-fr="Exploration continue de la forme, de la chanson intime aux arrangements plus amples. Bande originale pour <em>Monsieur N.</em>" data-en="Continued exploration of form, from intimate song to larger arrangements. Film score for <em>Monsieur N.</em>">Exploration continue de la forme, de la chanson intime aux arrangements plus amples. Bande originale pour <em>Monsieur N.</em></span></div>
+    <div class="timeline-item"><div class="year">2003–2012</div><strong>Taxi Europa · Eldorado · L’Envolée</strong><span data-fr="Tournées européennes continues et partenariat approfondi avec Martin Suter." data-en="Further European touring and the deepening partnership with Martin Suter.">Tournées européennes continues et partenariat approfondi avec Martin Suter.</span></div>
+    <div class="timeline-item"><div class="year">2017</div><strong>Song Book (avec Martin Suter)</strong><span data-fr="Premier projet livre-album commun. Concerts à guichets fermés en Suisse." data-en="First joint book-and-album project. Sold-out concerts in Switzerland.">Premier projet livre-album commun. Concerts à guichets fermés en Suisse.</span></div>
+    <div class="timeline-item"><div class="year">2019</div><strong>Homeless Songs</strong><span data-fr="Retour salué par la critique à un territoire plus personnel et acoustique." data-en="Critically praised return to more personal, acoustic territory.">Retour salué par la critique à un territoire plus personnel et acoustique.</span></div>
+    <div class="timeline-item"><div class="year">2022</div><strong>Ode</strong><span data-fr="Poursuite de l’acoustique ; inclut le titre « Le Plus Léger Au Monde »." data-en="Continued acoustic focus; includes the track “Le Plus Léger Au Monde.”">Poursuite de l’acoustique ; inclut le titre « Le Plus Léger Au Monde ».</span></div>
+    <div class="timeline-item"><div class="year">2025</div><strong>Poussière d’Or</strong><span data-fr="Dix-huitième album studio. Écrit principalement avec Philippe Djian (un titre avec Martin Suter). Produit par Martin Gallop. Intime, lumineux, délibérément libre d’intelligence artificielle." data-en="Eighteenth studio album. Written primarily with Philippe Djian (one track with Martin Suter). Produced by Martin Gallop. Intimate, luminous, deliberately free of artificial intelligence.">Dix-huitième album studio. Écrit principalement avec Philippe Djian (un titre avec Martin Suter). Produit par Martin Gallop. Intime, lumineux, délibérément libre d’intelligence artificielle.</span></div>
   </div>
 
   <h3 style="margin-top:3.5rem;" data-fr="Albums studio sélectionnés" data-en="Selected Studio Albums">Albums studio sélectionnés</h3>
@@ -152,14 +108,10 @@
   <p class="lead" style="color:var(--muted);" data-fr="Tournée Poussière d’Or (France) et Song Book Vol. 2 avec Martin Suter (Suisse 2027)." data-en="Poussière d’Or Tour (France) and Song Book Vol. 2 with Martin Suter (Switzerland 2027).">Tournée Poussière d’Or (France) et Song Book Vol. 2 avec Martin Suter (Suisse 2027).</p>
 
   <h3 style="font-family:'Playfair Display',serif; font-size:1.5rem; margin:2rem 0 1rem; color:var(--gold-soft);">Poussière d’Or Tour</h3>
-  <div id="tourDatesFR">
-    <!-- filled by JS -->
-  </div>
+  <div id="tourDatesFR"></div>
 
   <h3 style="font-family:'Playfair Display',serif; font-size:1.5rem; margin:3rem 0 1rem; color:var(--gold-soft);">Song Book Vol. 2 · with Martin Suter</h3>
-  <div id="songbookDates">
-    <!-- filled by JS -->
-  </div>
+  <div id="songbookDates"></div>
 </section>
 
 <section id="contact">
@@ -178,8 +130,6 @@
 </footer>
 
 <!-- ========== MODALS ========== -->
-
-<!-- Login Modal -->
 <div class="modal-overlay" id="loginModal">
   <div class="modal-box">
     <h3 data-fr="Connexion <span>Client</span>" data-en="Customer <span>Login</span>">Connexion <span>Client</span></h3>
@@ -196,26 +146,8 @@
   </div>
 </div>
 
-<!-- Admin Login Modal -->
-<div class="modal-overlay" id="adminModal">
-  <div class="modal-box">
-    <h3 data-fr="Connexion <span>Admin</span>" data-en="Admin <span>Login</span>">Connexion <span>Admin</span></h3>
-    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:1.5rem;" data-fr="Accès administrateur pour la gestion des réservations." data-en="Administrator access for booking management.">Accès administrateur pour la gestion des réservations.</p>
-    <label data-fr="Nom d’utilisateur" data-en="Username">Nom d’utilisateur</label>
-    <input type="text" id="adminUser" placeholder="admin" value="admin">
-    <label data-fr="Mot de passe" data-en="Password">Mot de passe</label>
-    <input type="password" id="adminPass" placeholder="••••••••" value="admin123">
-    <div class="modal-actions">
-      <button class="btn-secondary" onclick="closeModal('adminModal')" data-fr="Annuler" data-en="Cancel">Annuler</button>
-      <button class="btn-primary" onclick="handleAdminLogin()" data-fr="Se connecter" data-en="Log in">Se connecter</button>
-    </div>
-    <p class="modal-hint" data-fr="Démo : <code>admin</code> / <code>admin123</code>" data-en="Demo: <code>admin</code> / <code>admin123</code>">Démo : <code>admin</code> / <code>admin123</code></p>
-  </div>
-</div>
-
-<!-- Customer Dashboard (Flux Bank style with buffering) -->
+<!-- Customer Dashboard -->
 <div class="dashboard-overlay" id="dashboardOverlay">
-  <!-- Buffer Screen -->
   <div class="buffer-screen" id="bufferScreen">
     <div class="flux-logo">FLUX<span>BANK</span></div>
     <div class="buffer-ring"></div>
@@ -224,12 +156,11 @@
     <div class="buffer-bar"><div class="fill" id="bufferFill"></div></div>
   </div>
 
-  <!-- Dashboard Panel -->
   <div class="dashboard-panel" id="dashboardPanel">
     <div class="dash-header">
       <div>
         <div class="dash-title"><span>Flux</span> Dashboard</div>
-        <div style="font-size:0.8rem; color:var(--muted);" id="dashWelcome">Bienvenue</div>
+        <div style="font-size:0.8rem; color:var(--muted);" id="dashWelcome">Welcome back</div>
       </div>
       <div style="display:flex; gap:0.8rem; align-items:center;">
         <span class="flux-tag">Client</span>
@@ -239,77 +170,22 @@
     <div class="dash-body">
       <div class="dash-welcome">
         <div>
-          <h3 id="dashUserName">Bonjour, Client</h3>
-          <p data-fr="Voici un aperçu de vos réservations et de votre compte." data-en="Here's an overview of your bookings and account.">Voici un aperçu de vos réservations et de votre compte.</p>
+          <h3 id="dashUserName">Hello, Client</h3>
+          <p data-fr="Voici votre ticket et vos réservations à venir." data-en="Here's your ticket and upcoming bookings.">Voici votre ticket et vos réservations à venir.</p>
         </div>
         <button class="btn-primary" style="padding:0.6rem 1.2rem; font-size:0.85rem;" onclick="openBookingForm()" data-fr="Nouvelle réservation" data-en="New booking">Nouvelle réservation</button>
       </div>
 
-      <div class="dash-balance">
-        <div>
-          <div class="label" data-fr="Solde Flux" data-en="Flux Balance">Solde Flux</div>
-          <div class="amount">€ 1,240.00</div>
-        </div>
-        <span class="flux-badge">Flux Bank</span>
-      </div>
-
-      <div class="dash-grid">
-        <div class="dash-card">
-          <div class="card-label" data-fr="Réservations à venir" data-en="Upcoming bookings">Réservations à venir</div>
-          <div class="card-value" id="dashUpcoming">3</div>
-        </div>
-        <div class="dash-card">
-          <div class="card-label" data-fr="Réservations passées" data-en="Past bookings">Réservations passées</div>
-          <div class="card-value" id="dashPast">8</div>
-        </div>
-        <div class="dash-card">
-          <div class="card-label" data-fr="Statut du compte" data-en="Account status">Statut du compte</div>
-          <div class="card-value" style="font-size:1rem; color:var(--success);" data-fr="Actif" data-en="Active">Actif</div>
-        </div>
-      </div>
+      <div class="ticket-view" id="customerTicketView"></div>
 
       <div>
-        <h4 style="font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:0.8rem;" data-fr="Mes réservations" data-en="My bookings">Mes réservations</h4>
-        <div class="dash-bookings" id="dashBookings">
-          <!-- filled by JS -->
-        </div>
+        <h4 style="font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:0.8rem;" data-fr="Toutes mes réservations" data-en="All my bookings">Toutes mes réservations</h4>
+        <div class="dash-bookings" id="dashBookings"></div>
       </div>
     </div>
     <div class="dash-footer">
       <span data-fr="Propulsé par Flux Bank" data-en="Powered by Flux Bank">Propulsé par Flux Bank</span>
       <a href="#" onclick="closeDashboard()" data-fr="Se déconnecter" data-en="Log out">Se déconnecter</a>
-    </div>
-  </div>
-</div>
-
-<!-- Admin Panel -->
-<div class="dashboard-overlay" id="adminPanelOverlay">
-  <div class="admin-panel" id="adminPanel">
-    <div class="admin-header">
-      <div>
-        <div class="admin-title">Admin <span>Panel</span></div>
-        <div style="font-size:0.8rem; color:var(--muted);" data-fr="Gestion des réservations" data-en="Booking management">Gestion des réservations</div>
-      </div>
-      <div style="display:flex; gap:0.8rem; align-items:center;">
-        <span class="admin-badge">Admin</span>
-        <button class="dash-close" onclick="closeAdminPanel()">✕</button>
-      </div>
-    </div>
-    <div class="admin-body">
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th data-fr="Client" data-en="Client">Client</th>
-            <th data-fr="Date" data-en="Date">Date</th>
-            <th data-fr="Lieu" data-en="Venue">Lieu</th>
-            <th data-fr="Statut" data-en="Status">Statut</th>
-            <th data-fr="Actions" data-en="Actions">Actions</th>
-          </tr>
-        </thead>
-        <tbody id="adminBookingsTable">
-          <!-- filled by JS -->
-        </tbody>
-      </table>
     </div>
   </div>
 </div>
@@ -329,6 +205,7 @@
   </div>
 </div>
 
-<script src="js/script.js"></script>
+<!-- Linked to the root script.js -->
+<script src="script.js"></script>
 </body>
 </html>
