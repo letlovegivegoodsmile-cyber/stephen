@@ -2,77 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin · Stephan Eicher</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administration — Réservations</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background: #0b0b0d;
+      color: #f5f1eb;
+      font-family: Arial, sans-serif;
+    }
+    main {
+      width: min(100%, 620px);
+      padding: 32px;
+      border: 1px solid #c9a66b;
+      border-radius: 8px;
+      background: #141416;
+    }
+    h1 { font-family: Georgia, serif; font-weight: 400; }
+    p, li { color: #b7b0a7; line-height: 1.7; }
+    a.button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 12px 18px;
+      border: 1px solid #c9a66b;
+      border-radius: 4px;
+      color: #c9a66b;
+      text-decoration: none;
+    }
+    a.button:hover { background: #c9a66b; color: #111; }
+    .back { display: block; margin-top: 22px; color: #c9a66b; }
+  </style>
 </head>
-<body class="admin-page">
+<body>
+  <main>
+    <h1>Demandes de réservation</h1>
+    <p>Les formulaires envoyés sont enregistrés dans Netlify. Connectez-vous au compte Netlify qui héberge ce site pour les consulter.</p>
 
-  <header class="admin-topbar">
-    <a href="index.html" class="brand">STEPHAN EICHER <span>· Admin</span></a>
-    <a href="index.html" class="back-link">← Retour au site</a>
-  </header>
+    <a class="button" href="https://app.netlify.com/" target="_blank" rel="noopener">
+      Ouvrir Netlify
+    </a>
 
-  <div class="admin-login-wrap" id="loginView">
-    <div class="admin-login-box">
-      <h2>Admin <span>Login</span></h2>
-      <p class="sub">Accès administrateur pour la gestion des réservations.</p>
-      <div class="error" id="loginError">Identifiants invalides.</div>
-      <label for="adminUser">Nom d’utilisateur</label>
-      <input type="text" id="adminUser" placeholder="admin" value="admin">
-      <label for="adminPass">Mot de passe</label>
-      <input type="password" id="adminPass" placeholder="••••••••" value="admin123">
-      <button onclick="handleAdminLogin()">Se connecter</button>
-      <p class="hint">Démo : <code>admin</code> / <code>admin123</code></p>
-    </div>
-  </div>
+    <ol>
+      <li>Dans Netlify, sélectionnez le site de votre projet.</li>
+      <li>Ouvrez la section <strong>Forms</strong>, puis le formulaire <strong>event-booking</strong>.</li>
+      <li>Pour recevoir un email à chaque demande, configurez une notification de formulaire dans les paramètres du site.</li>
+    </ol>
 
-  <main class="admin-main" id="adminMain">
-    <div class="admin-head">
-      <div>
-        <h1>Admin <span>Panel</span></h1>
-        <p>Gestion des réservations · Stephan Eicher</p>
-      </div>
-      <div class="actions">
-        <button onclick="adminLoadBookings()">↻ Rafraîchir</button>
-        <button class="logout" onclick="adminLogout()">Se déconnecter</button>
-      </div>
-    </div>
-
-    <div class="admin-stats">
-      <div class="stat-card">
-        <div class="label">Total réservations</div>
-        <div class="value" id="statTotal">0</div>
-      </div>
-      <div class="stat-card">
-        <div class="label">Confirmées</div>
-        <div class="value" id="statConfirmed">0</div>
-      </div>
-      <div class="stat-card">
-        <div class="label">En attente</div>
-        <div class="value" id="statPending">0</div>
-      </div>
-    </div>
-
-    <div class="admin-table-wrap">
-      <div class="head">Toutes les réservations</div>
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Client</th>
-            <th>Date</th>
-            <th>Lieu</th>
-            <th>Statut</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody id="adminBookingsTable"></tbody>
-      </table>
-    </div>
+    <a class="back" href="index.html">← Retour au site</a>
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
