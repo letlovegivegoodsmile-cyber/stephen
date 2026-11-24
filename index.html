@@ -4,59 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Site officiel — musique, événements et réservations.">
-  <meta name="theme-color" content="#0b0b0d">
-  <title>Votre nom — Site officiel</title>
+  <title>Site officiel — Musique & événements</title>
 
   <style>
     :root {
-      --background: #0b0b0d;
-      --panel: rgba(15, 15, 17, .97);
-      --text: #f5f1eb;
-      --muted: #bbb4aa;
-      --gold: #c9a66b;
-      --border: rgba(255, 255, 255, .16);
+      --fond: #0b0b0d;
+      --texte: #f5f1eb;
+      --doux: #b7b0a7;
+      --or: #c9a66b;
+      --ligne: rgba(255,255,255,.14);
+      --panneau: rgba(12,12,14,.96);
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       min-height: 100vh;
-      background: var(--background);
-      color: var(--text);
+      background: var(--fond);
+      color: var(--texte);
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      isolation: isolate;
     }
 
-    #slideshow,
-    #overlay {
+    #slideshow, #overlay {
       position: fixed;
       inset: 0;
       pointer-events: none;
     }
 
     #slideshow {
-      z-index: -2;
+      z-index: 0;
       background-position: center;
       background-size: cover;
-      opacity: .55;
+      opacity: .48;
       transition: background-image 1s ease-in-out;
     }
 
     #overlay {
-      z-index: -1;
-      background:
-        linear-gradient(90deg, rgba(5, 5, 7, .88), rgba(5, 5, 7, .4)),
-        linear-gradient(0deg, var(--background), transparent 70%);
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(5,5,7,.88), rgba(5,5,7,.35)),
+                  linear-gradient(0deg, var(--fond), transparent 65%);
     }
 
-    .site {
-      position: relative;
-      z-index: 1;
-    }
+    .site { position: relative; z-index: 2; }
 
     header {
       position: fixed;
@@ -66,133 +57,92 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 16px 6%;
-      border-bottom: 1px solid var(--border);
-      background: rgba(8, 8, 10, .86);
+      padding: 18px 6%;
+      background: rgba(8,8,10,.82);
+      border-bottom: 1px solid var(--ligne);
       backdrop-filter: blur(12px);
     }
 
     .logo {
-      color: var(--text);
+      color: var(--texte);
       text-decoration: none;
-      font: 1.35rem Georgia, serif;
-      white-space: nowrap;
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-size: .92rem;
+    nav { display: flex; align-items: center; gap: 22px; }
+    nav a, .admin-link {
+      color: var(--doux);
       text-decoration: none;
+      font-size: .9rem;
     }
+    nav a:hover, .admin-link:hover { color: var(--or); }
 
-    nav a:hover,
-    .back-link:hover {
-      color: var(--gold);
-    }
-
-    button {
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .booking-button,
-    .action-button {
-      padding: 11px 18px;
-      border: 1px solid var(--gold);
+    button, .button {
+      border: 1px solid var(--or);
       border-radius: 4px;
+      padding: 11px 18px;
       background: transparent;
-      color: var(--gold);
+      color: var(--or);
+      cursor: pointer;
+      font: inherit;
       text-decoration: none;
-      transition: background .2s, color .2s;
+      transition: .2s ease;
     }
 
-    .booking-button:hover,
-    .action-button:hover,
-    .booking-button.active {
-      background: var(--gold);
+    button:hover, .button:hover,
+    #bookingButton.active {
+      background: var(--or);
       color: #111;
     }
 
-    main { padding-top: 70px; }
-
-    section {
-      width: min(100%, 1100px);
-      margin: 0 auto;
-      padding: 85px 8%;
-      scroll-margin-top: 75px;
-    }
+    main { padding-top: 72px; }
+    section { padding: 90px 8%; max-width: 1100px; margin: auto; }
 
     .hero {
-      min-height: 88vh;
+      min-height: 86vh;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       justify-content: flex-end;
+      align-items: flex-start;
       padding-bottom: 100px;
     }
 
     .eyebrow {
-      color: var(--gold);
-      font-size: .82rem;
+      color: var(--or);
       letter-spacing: .18em;
       text-transform: uppercase;
+      font-size: .8rem;
     }
 
-    h1, h2 {
-      font-family: Georgia, serif;
-      font-weight: 400;
-    }
-
-    h1 {
-      margin: 12px 0;
-      font-size: clamp(3.5rem, 11vw, 7rem);
-      line-height: .98;
-    }
-
-    h2 {
-      margin: 12px 0 20px;
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      line-height: 1.1;
-    }
-
-    h3 { font-family: Georgia, serif; font-weight: 400; }
-
-    p { color: var(--muted); }
-
-    .hero p {
-      max-width: 560px;
-      margin-bottom: 26px;
-      font-size: 1.1rem;
-    }
+    h1, h2 { font-family: Georgia, serif; font-weight: 400; }
+    h1 { font-size: clamp(3.5rem, 11vw, 7rem); line-height: .98; margin: 12px 0; }
+    h2 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+    p { color: var(--doux); }
+    .hero p { max-width: 560px; font-size: 1.1rem; }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
     }
 
     .card {
-      padding: 20px;
-      border: 1px solid var(--border);
-      background: rgba(12, 12, 14, .75);
+      padding: 22px;
+      border: 1px solid var(--ligne);
+      background: rgba(12,12,14,.7);
     }
 
     footer {
       position: relative;
-      z-index: 1;
-      padding: 25px 8%;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
+      z-index: 2;
+      padding: 28px 8%;
+      border-top: 1px solid var(--ligne);
+      color: var(--doux);
       text-align: center;
     }
 
-    /* Fenêtre du formulaire */
+    /* Fenêtre de réservation */
     .modal {
       position: fixed;
       inset: 0;
@@ -201,7 +151,7 @@
       align-items: center;
       justify-content: center;
       padding: 18px;
-      background: rgba(0, 0, 0, .8);
+      background: rgba(0,0,0,.78);
     }
 
     .modal.open { display: flex; }
@@ -212,27 +162,23 @@
       max-height: 90vh;
       overflow-y: auto;
       padding: 30px;
-      border: 1px solid var(--gold);
+      border: 1px solid var(--or);
       border-radius: 8px;
-      background: var(--panel);
-      box-shadow: 0 20px 80px rgba(0, 0, 0, .6);
+      background: var(--panneau);
+      box-shadow: 0 20px 80px rgba(0,0,0,.6);
     }
 
-    .modal-box h2 {
-      margin: 0 45px 8px 0;
-      font-size: 2rem;
-    }
+    .modal-box h2 { margin: 0 45px 5px 0; font-size: 2rem; }
 
-    .close-button {
+    .close {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: transparent;
-      color: var(--text);
+      top: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-color: var(--ligne);
+      color: var(--texte);
       font-size: 1.5rem;
     }
 
@@ -243,61 +189,40 @@
       margin-top: 20px;
     }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
+    .field { display: flex; flex-direction: column; gap: 6px; }
     .field.full { grid-column: 1 / -1; }
 
-    label {
-      color: var(--muted);
-      font-size: .9rem;
-    }
+    label { color: var(--doux); font-size: .88rem; }
 
     input, select, textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--ligne);
       border-radius: 4px;
       background: #151518;
-      color: var(--text);
+      color: var(--texte);
       font: inherit;
     }
 
     input:focus, select:focus, textarea:focus {
-      border-color: var(--gold);
-      outline: 1px solid var(--gold);
+      outline: 1px solid var(--or);
+      border-color: var(--or);
     }
 
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .submit-button {
-      width: 100%;
-      margin-top: 18px;
-    }
-
-    .form-status { color: var(--gold); }
+    textarea { min-height: 110px; resize: vertical; }
+    .submit-button { margin-top: 18px; width: 100%; }
+    .status { color: var(--or); margin-top: 12px; }
 
     @media (max-width: 650px) {
-      header { padding: 13px 5%; }
-      nav { gap: 12px; }
+      header { padding: 14px 5%; }
+      nav { gap: 10px; }
       nav a:not(.admin-link) { display: none; }
       .admin-link { display: none; }
       section { padding: 70px 6%; }
       .hero { min-height: 78vh; }
       .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: auto; }
-      .modal-box { padding: 25px 18px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
+      .modal-box { padding: 24px 18px; }
     }
   </style>
 </head>
@@ -309,14 +234,12 @@
   <div class="site">
     <header>
       <a class="logo" href="#accueil">Votre nom</a>
-
       <nav aria-label="Navigation principale">
         <a href="#apropos">À propos</a>
         <a href="#evenements">Événements</a>
         <a href="#contact">Contact</a>
         <a class="admin-link" href="admin.html">Admin</a>
-        <button class="booking-button" id="bookingButton"
-                type="button" aria-expanded="false">
+        <button id="bookingButton" type="button" aria-expanded="false">
           Réserver
         </button>
       </nav>
@@ -326,10 +249,8 @@
       <section class="hero" id="accueil">
         <span class="eyebrow">Musique · Événements</span>
         <h1>Votre nom</h1>
-        <p>Bienvenue sur le site officiel. Découvrez la musique et contactez-nous pour votre prochain événement.</p>
-        <button class="action-button open-booking" type="button">
-          Demander une réservation
-        </button>
+        <p>Bienvenue sur le site officiel. Découvrez la musique et contactez-nous pour vos événements.</p>
+        <button class="open-booking" type="button">Demander une réservation</button>
       </section>
 
       <section id="apropos">
@@ -342,28 +263,17 @@
         <span class="eyebrow">Événements</span>
         <h2>Réservations</h2>
         <div class="cards">
-          <article class="card">
-            <h3>Concerts</h3>
-            <p>Pour vos concerts et spectacles.</p>
-          </article>
-          <article class="card">
-            <h3>Événements privés</h3>
-            <p>Pour vos célébrations et fêtes privées.</p>
-          </article>
-          <article class="card">
-            <h3>Événements professionnels</h3>
-            <p>Pour vos événements d’entreprise et festivals.</p>
-          </article>
+          <div class="card"><h3>Concerts</h3><p>Pour vos concerts et spectacles.</p></div>
+          <div class="card"><h3>Événements privés</h3><p>Pour vos célébrations et événements privés.</p></div>
+          <div class="card"><h3>Événements professionnels</h3><p>Pour vos événements d’entreprise et festivals.</p></div>
         </div>
       </section>
 
       <section id="contact">
         <span class="eyebrow">Contact</span>
         <h2>Parlons de votre événement.</h2>
-        <p>Envoyez votre demande de réservation à l’aide du formulaire.</p>
-        <button class="action-button open-booking" type="button">
-          Faire une demande
-        </button>
+        <p>Utilisez le bouton « Réserver » pour envoyer une demande.</p>
+        <button class="open-booking" type="button">Faire une demande</button>
       </section>
     </main>
 
@@ -371,11 +281,9 @@
   </div>
 
   <div class="modal" id="bookingModal" role="dialog" aria-modal="true"
-       aria-labelledby="bookingTitle" aria-hidden="true">
+       aria-labelledby="bookingTitle">
     <div class="modal-box">
-      <button class="close-button" id="closeBooking" type="button"
-              aria-label="Fermer le formulaire">×</button>
-
+      <button class="close" id="closeBooking" type="button" aria-label="Fermer">×</button>
       <h2 id="bookingTitle">Demande de réservation</h2>
       <p>Remplissez le formulaire. Votre demande sera transmise à l’administrateur.</p>
 
@@ -384,28 +292,23 @@
         <input type="hidden" name="form-name" value="event-booking">
 
         <p hidden>
-          <label>Ne remplissez pas ce champ :
-            <input name="bot-field">
-          </label>
+          <label>Ne remplissez pas ce champ : <input name="bot-field"></label>
         </p>
 
         <div class="form-grid">
           <div class="field">
             <label for="name">Nom</label>
-            <input id="name" name="nom" type="text"
-                   autocomplete="name" required>
+            <input id="name" name="nom" type="text" autocomplete="name" required>
           </div>
 
           <div class="field">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email"
-                   autocomplete="email" required>
+            <input id="email" name="email" type="email" autocomplete="email" required>
           </div>
 
           <div class="field">
             <label for="phone">Téléphone</label>
-            <input id="phone" name="telephone" type="tel"
-                   autocomplete="tel" required>
+            <input id="phone" name="telephone" type="tel" autocomplete="tel" required>
           </div>
 
           <div class="field">
@@ -422,11 +325,11 @@
             <label for="eventType">Type d’événement</label>
             <select id="eventType" name="type_evenement" required>
               <option value="">Choisissez une option</option>
-              <option value="Concert">Concert</option>
-              <option value="Événement privé">Événement privé</option>
-              <option value="Événement professionnel">Événement professionnel</option>
-              <option value="Festival">Festival</option>
-              <option value="Autre">Autre</option>
+              <option>Concert</option>
+              <option>Mariage ou fête privée</option>
+              <option>Événement professionnel</option>
+              <option>Festival</option>
+              <option>Autre</option>
             </select>
           </div>
 
@@ -436,18 +339,16 @@
           </div>
         </div>
 
-        <button class="action-button submit-button" type="submit">
-          Envoyer la demande
-        </button>
-        <p class="form-status" id="bookingStatus" aria-live="polite"></p>
+        <button class="submit-button" type="submit">Envoyer la demande</button>
+        <p class="status" id="bookingStatus" aria-live="polite"></p>
       </form>
     </div>
   </div>
 
   <script>
-    // Placez photo_01.jpg à photo_17.jpg dans le dossier images/.
-    const photos = Array.from({ length: 17 }, (_, index) =>
-      `images/photo_${String(index + 1).padStart(2, "0")}.jpg`
+    // Les 17 fichiers doivent être dans le dossier images/ avec ces noms exacts.
+    const photos = Array.from({ length: 17 }, (_, i) =>
+      `images/photo_${String(i + 1).padStart(2, "0")}.jpg`
     );
 
     const slideshow = document.getElementById("slideshow");
@@ -455,20 +356,16 @@
 
     function showPhoto(index) {
       const image = new Image();
-
       image.onload = () => {
         slideshow.style.backgroundImage = `url("${photos[index]}")`;
       };
-
       image.onerror = () => {
         console.warn("Image introuvable :", photos[index]);
       };
-
       image.src = photos[index];
     }
 
     showPhoto(photoIndex);
-
     setInterval(() => {
       photoIndex = (photoIndex + 1) % photos.length;
       showPhoto(photoIndex);
@@ -476,54 +373,41 @@
 
     const modal = document.getElementById("bookingModal");
     const bookingButton = document.getElementById("bookingButton");
-    const closeButton = document.getElementById("closeBooking");
 
-    function setModalOpen(open) {
+    function setModal(open) {
       modal.classList.toggle("open", open);
-      modal.setAttribute("aria-hidden", String(!open));
       bookingButton.classList.toggle("active", open);
       bookingButton.setAttribute("aria-expanded", String(open));
       document.body.style.overflow = open ? "hidden" : "";
-
-      if (open) {
-        document.getElementById("name").focus();
-      }
     }
 
     bookingButton.addEventListener("click", () => {
-      setModalOpen(!modal.classList.contains("open"));
+      setModal(!modal.classList.contains("open"));
     });
 
     document.querySelectorAll(".open-booking").forEach(button => {
-      button.addEventListener("click", () => setModalOpen(true));
+      button.addEventListener("click", () => setModal(true));
     });
 
-    closeButton.addEventListener("click", () => setModalOpen(false));
+    document.getElementById("closeBooking").addEventListener("click", () => {
+      setModal(false);
+    });
 
     modal.addEventListener("click", event => {
-      if (event.target === modal) setModalOpen(false);
+      if (event.target === modal) setModal(false);
     });
 
     document.addEventListener("keydown", event => {
-      if (event.key === "Escape") setModalOpen(false);
+      if (event.key === "Escape") setModal(false);
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Empêche de sélectionner une date passée.
-    const dateInput = document.getElementById("date");
-    const today = new Date();
-    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
-      .toISOString()
-      .split("T")[0];
-    dateInput.min = localToday;
-
-    // Affiche une confirmation après le retour de Netlify.
-    if (new URLSearchParams(window.location.search).get("booking") === "success") {
-      setModalOpen(true);
+    if (new URLSearchParams(location.search).get("booking") === "success") {
+      setModal(true);
       document.getElementById("bookingStatus").textContent =
         "Merci, votre demande a bien été envoyée.";
-      window.history.replaceState({}, "", window.location.pathname);
+      history.replaceState({}, "", location.pathname);
     }
   </script>
 </body>
